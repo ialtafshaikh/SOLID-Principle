@@ -14,4 +14,4 @@ SOLID stands for:
 - I - Interface Segregation Principle
 - D - Dependency Inversion Principle
 
-In this article, you will be introduced to each principle individually to understand how SOLID can help make you a better developer.
+Here, you will be introduced to each principle individually to understand how SOLID can help make you a better developer.
