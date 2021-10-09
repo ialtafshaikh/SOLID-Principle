@@ -1,3 +1,5 @@
+<?php
+
 class Square
 {
     public $length;

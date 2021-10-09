@@ -1,3 +1,5 @@
+<?php
+
 class MySQLConnection
 {
     public function connect()

@@ -2,10 +2,10 @@
 
 Let’s revisit the AreaCalculator class and focus on the sum method:
 
-```
+```php
 class AreaCalculator
 {
-protected $shapes;
+    protected $shapes;
 
     public function __construct($shapes = [])
     {
@@ -34,10 +34,10 @@ A way you can make this sum method better is to remove the logic to calculate th
 
 Here is the area method defined in Square:
 
-```
+```php
 class Square
 {
-public $length;
+    public $length;
 
     public function __construct($length)
     {
@@ -54,10 +54,10 @@ public $length;
 
 And here is the area method defined in Circle:
 
-```
+```php
 class Circle
 {
-public $radius;
+    public $radius;
 
     public function construct($radius)
     {
@@ -74,7 +74,7 @@ public $radius;
 
 The sum method for AreaCalculator can then be rewritten as:
 
-```
+```php
 class AreaCalculator
 {
 // ...
@@ -99,10 +99,10 @@ Coding to an interface is an integral part of SOLID.
 
 Create a ShapeInterface that supports area:
 
-```
+```php
 interface ShapeInterface
 {
-public function area();
+    public function area();
 }
 ```
 
@@ -110,7 +110,7 @@ Modify your shape classes to implement the `ShapeInterface`.
 
 Here is the update to Square:
 
-```
+```php
 class Square implements ShapeInterface
 {
 // ...
@@ -119,7 +119,7 @@ class Square implements ShapeInterface
 
 And here is the update to Circle:
 
-```
+```php
 class Circle implements ShapeInterface
 {
 // ...
@@ -128,7 +128,7 @@ class Circle implements ShapeInterface
 
 In the sum method for AreaCalculator, you can check if the shapes provided are actually instances of the ShapeInterface; otherwise, throw an exception:
 
-```
+```php
 class AreaCalculator
 {
 // ...

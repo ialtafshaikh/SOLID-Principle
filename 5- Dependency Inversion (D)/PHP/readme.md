@@ -2,7 +2,7 @@
 
 Here is an example of a `PasswordReminder` that connects to a MySQL database:
 
-```
+```php
 class MySQLConnection
 {
     public function connect()
@@ -29,7 +29,7 @@ Later, if you were to change the database engine, you would also have to edit th
 
 The `PasswordReminder` class should not care what database your application uses. To address these issues, you can code to an interface since high-level and low-level modules should depend on abstraction:
 
-```
+```php
 interface DBConnectionInterface
 {
     public function connect();
@@ -38,7 +38,7 @@ interface DBConnectionInterface
 
 The interface has a connect method and the `MySQLConnection` class implements this interface. Also, instead of directly type-hinting `MySQLConnection` class in the constructor of the `PasswordReminder`, you instead type-hint the `DBConnectionInterface` and no matter the type of database your application uses, the `PasswordReminder` class can connect to the database without any problems and open-close principle is not violated.
 
-```
+```php
 class MySQLConnection implements DBConnectionInterface
 {
     public function connect()
