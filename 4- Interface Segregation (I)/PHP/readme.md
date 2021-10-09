@@ -4,7 +4,7 @@ Still building from the previous `ShapeInterface` example, you will need to supp
 
 Let’s consider what would happen if you were to modify the `ShapeInterface` to add another contract:
 
-```
+```php
 interface ShapeInterface
 {
     public function area();
@@ -17,7 +17,7 @@ Now, any shape you create must implement the volume method, but you know that sq
 
 This would violate the interface segregation principle. Instead, you could create another interface called `ThreeDimensionalShapeInterface` that has the volume contract and three-dimensional shapes can implement this interface:
 
-```
+```php
 interface ShapeInterface
 {
     public function area();
@@ -46,7 +46,7 @@ This is a much better approach, but a pitfall to watch out for is when type-hint
 
 This way, you can have a single API for managing the shapes:
 
-```
+```php
 interface ManageShapeInterface
 {
     public function calculate();

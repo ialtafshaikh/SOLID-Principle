@@ -2,13 +2,13 @@
 
 Building off the example AreaCalculator class, consider a new VolumeCalculator class that extends the AreaCalculator class:
 
-```
+```php
 class VolumeCalculator extends AreaCalculator
 {
-public function construct($shapes = [])
+    public function construct($shapes = [])
     {
         parent::construct($shapes);
-}
+    }
 
     public function sum()
     {
@@ -21,9 +21,9 @@ public function construct($shapes = [])
 
 Recall that the `SumCalculatorOutputter` class resembles this:
 
-```
+```php
 class SumCalculatorOutputter {
-protected $calculator;
+    protected $calculator;
 
     public function __constructor(AreaCalculator $calculator) {
         $this->calculator = $calculator;
@@ -40,8 +40,8 @@ protected $calculator;
     public function HTML() {
         return implode('', array(
             '',
-                'Sum of the areas of provided shapes: ',
-                $this->calculator->sum(),
+            'Sum of the areas of provided shapes: ',
+            $this->calculator->sum(),
             ''
         ));
     }
@@ -51,7 +51,7 @@ protected $calculator;
 
 If you tried to run an example like this:
 
-```
+```php
 $areas = new AreaCalculator($shapes);
 $volumes = new VolumeCalculator($solidShapes);
 
@@ -63,13 +63,13 @@ When you call the HTML method on the $output2 object, you will get an E_NOTICE e
 
 To fix this, instead of returning an array from the VolumeCalculator class sum method, return $summedData:
 
-```
+```php
 class VolumeCalculator extends AreaCalculator
 {
-public function construct($shapes = [])
+    public function construct($shapes = [])
     {
         parent::construct($shapes);
-}
+    }
 
     public function sum()
     {
