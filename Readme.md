@@ -27,7 +27,7 @@ in respective folders on any topic don't forget to read the rules below for suce
 
 <p>This repo is About Solid Principles where we are aimming to implement SOLID princliple in different languages.</p>
 
-1. Star this repo
+1. Star this repo (if you want)
 2. Fork this repo
 3. You can Implement Any 1 Solid Principle in Any One Language and put in appropriate folder
 3. Create A PR with appropriate messsage.
